@@ -4,7 +4,7 @@
             <img :src="poster" alt="Poster">
         </div>
         <p>Title: "{{title}}{{name}}"</p>
-        <p>Original title: "{{originalTitle}}{{originalName}}"</p>
+        <p :class="(originalTitle == title) ? 'd-none' : ''">Original title: "{{originalTitle}}{{originalName}}"</p>
         <p>Language: <span class="p-1"><img class="language" :src="language" alt="Language"></span></p>
         <p>Vote: "{{vote}}"</p>
     </div>
@@ -13,7 +13,12 @@
 <script>
 export default {
     name:'MainCard',
-    props: ['title', 'originalTitle', 'language', 'vote', 'name', 'originalName', 'poster']
+    props: ['title', 'originalTitle', 'language', 'vote', 'name', 'originalName', 'poster'],
+    methods: {
+        /* voteTrasform(number){
+            
+        } */
+    }
 }
 </script>
 

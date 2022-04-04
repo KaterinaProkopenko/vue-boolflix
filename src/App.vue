@@ -85,7 +85,7 @@ export default {
             }
 
             singleFilm.poster_path = this.posterLink + singleFilm.poster_path;
-            console.log(singleFilm.poster_path);
+            
           })
       })
       .catch((error) => {
