@@ -1,6 +1,6 @@
 <template>
   <main>
-    <MainCard v-for="(element, index) in userSearchFilms" :key="index" :title="element.title" :originalTitle="element.original_title" :language="element.original_language" :vote="element.vote_average"/> 
+    <MainCard v-for="(element, index) in userSearchFilms" :key="index" :poster="element.poster_path" :title="element.title" :originalTitle="element.original_title" :name="element.name" :originalName="element.original_name" :language="element.original_language" :vote="element.vote_average"/> 
   </main>
 </template>
 

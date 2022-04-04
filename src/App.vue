@@ -22,6 +22,7 @@ export default {
     return{
       searchString: '',
       films: [],
+      posterLink: 'https://image.tmdb.org/t/p/w185/',
     }
   },
   methods: {
@@ -43,7 +44,8 @@ export default {
             switch (singleFilm.original_language) {
 
               case "en":
-                singleFilm.original_language =  "https://images.saymedia-content.com/.image/t_share/MTc0MjU4ODkxNzg4Mzk2NDEy/differences-between-british-and-american-english.png";
+
+                singleFilm.original_language = "https://images.saymedia-content.com/.image/t_share/MTc0MjU4ODkxNzg4Mzk2NDEy/differences-between-british-and-american-english.png";
                 break;
 
               case "fr":
@@ -79,8 +81,11 @@ export default {
                 break;
 
               default:
-                singleFilm.original_language = "https://cdn0.iconfinder.com/data/icons/ecommerce-57/100/Ecommerce_RTE-50-512.png"
+                singleFilm.original_language = "https://cdn0.iconfinder.com/data/icons/ecommerce-57/100/Ecommerce_RTE-50-512.png";
             }
+
+            singleFilm.poster_path = this.posterLink + singleFilm.poster_path;
+            console.log(singleFilm.poster_path);
           })
       })
       .catch((error) => {
