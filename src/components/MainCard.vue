@@ -1,12 +1,12 @@
 <template>
-    <div class="film-card p-2">
-        <div>
-            <img :src="poster" alt="Poster">
-        </div>
-        <p>Title: "{{title}}{{name}}"</p>
-        <p :class="(originalTitle == title) ? 'd-none' : ''">Original title: "{{originalTitle}}{{originalName}}"</p>
-        <p>Language: <span class="p-1"><img class="language" :src="language" :alt="language"></span></p>
-        <p>Vote: <span v-html="stars()"></span></p>
+    <div class="film-card m-2 text-light">
+        <!-- <div class="w-100 h-100">
+            <img class="img-fluid poster" :src="poster" alt="Poster">
+        </div> -->
+        <h5 ><span class="fw-bold">Title:</span> "{{title}}{{name}}"</h5>
+        <h5 :class="(originalTitle == title) ? 'd-none' : ''"><span class="fw-bold">Original title:</span> "{{originalTitle}}{{originalName}}"</h5>
+        <h5><span class="fw-bold">Language:</span> <span class="p-1"><img class="language" :src="language" :alt="language"></span></h5>
+        <h5><span class="fw-bold">Vote:</span> <span class="star" v-html="stars()"></span></h5>
         <p></p>
     </div> 
 </template>
@@ -41,10 +41,20 @@ export default {
 
 <style lang="scss" scoped>
     div.film-card{
-        border: 1px solid rgb(255, 106, 0);
+        background-color: rgb(22, 22, 22);
+        border: 1px solid white;
         img.language{
             width: 35px;
         }
+        span.star{
+            color: orange;
+        }
+    }
+
+    div.film-card,
+    img.poster {
+        width: 342px;
+        height: 465px;
     }
 
 </style>

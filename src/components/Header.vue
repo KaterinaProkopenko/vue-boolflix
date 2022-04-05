@@ -1,9 +1,15 @@
 <template>
-  <header>
-    <div class="input-group mb-3">
-        <input v-model.trim="searchString" type="text" class="form-control" placeholder="Search">
-        <button @click="$emit('search', searchString)" class="btn btn-primary">Search</button>
-    </div>
+  <header class="container-fluid">
+      <div class="row h-100">
+         <div class="col-6 d-flex align-items-center h-100">
+             <h2 class="text-uppercase text-danger">boolflix</h2>
+         </div>
+         <div class="col-6 d-flex align-items-center justify-content-end h-100">
+            <div class="input-group input-group-sm ms-input">
+                <input v-model.trim="searchString" @keyup.enter="$emit('search', searchString)" type="text" class="form-control" placeholder="Search">
+            </div>
+         </div>  
+      </div>   
   </header>
 </template>
 
@@ -21,8 +27,12 @@ export default {
 
 <style lang="scss" scoped>
     header{
-        div{
-            width: 400px;
+        width: 100%;
+        height: 70px;
+        background-color: rgb(20, 20, 20);
+
+        div.ms-input{
+            width: 350px;
         }
     }
 

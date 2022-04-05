@@ -22,7 +22,7 @@ export default {
     return{
       searchString: '',
       films: [],
-      posterLink: 'https://image.tmdb.org/t/p/w185/',
+      posterLink: 'https://image.tmdb.org/t/p/w342/',
     }
   },
   methods: {
@@ -84,7 +84,12 @@ export default {
                 singleFilm.original_language;
             }
 
-            singleFilm.poster_path = this.posterLink + singleFilm.poster_path;
+            if(singleFilm.poster_path == null || singleFilm.poster_path == undefined){
+              singleFilm.poster_path = 'https://christopherscottdesigner.files.wordpress.com/2014/05/this-poster-is-not-available-christopher-scott1.jpg';
+            } else {
+              singleFilm.poster_path = this.posterLink + singleFilm.poster_path;
+            }
+            
 
           })
       })
