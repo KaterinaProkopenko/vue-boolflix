@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="input-group mb-3">
-        <input v-model="searchString" type="text" class="form-control" placeholder="Search">
+        <input v-model.trim="searchString" type="text" class="form-control" placeholder="Search">
         <button @click="$emit('search', searchString)" class="btn btn-primary">Search</button>
     </div>
   </header>

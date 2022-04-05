@@ -14,7 +14,6 @@ export default {
     },
     props: ['userSearchFilms'],
     methods: {
-        
     }
 }
 </script>
