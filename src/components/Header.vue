@@ -1,5 +1,5 @@
 <template>
-  <header class="container-fluid">
+  <header class="container-fluid bg-gradient">
       <div class="row h-100">
          <div class="col-6 d-flex align-items-center h-100">
              <h2 class="text-uppercase text-danger">boolflix</h2>
@@ -29,7 +29,7 @@ export default {
     header{
         width: 100%;
         height: 70px;
-        background-color: rgb(20, 20, 20);
+        background-color: black;
 
         div.ms-input{
             width: 350px;
